@@ -1,0 +1,30 @@
+Making a progress bar in JavaScript as a Junior
+
+the last week I have been watching summer games done quick, a week long video game marathon supporting the charity Doctors without Borders. Participants in the marathon all try to play different video games as fast as possible.
+
+Part of the fun of watching the marathon is donation incentives. These incentives are a goal to reach when the game is played. Some are to do a different trick or go out of the way to do something that would make them play the game a bit slower, making the run less optimal. Thre is usually a lot of bidding wars as well, where people will bid on a name for a character to use in game. In between games a splash screen is showing and rotates through all the incentives, including character names, with the highest name at the top and shown in descending order.
+
+I thought it might be a fun experiment to try and figure out how to make a similar metre in JavaScript.
+
+So we will outline the goals of this experiment.
+
+  1. The initial amounts will be random
+  2. Users will be able to update amounts to the item list
+  3. There will be a maximum of three bars.
+  4. The bar names will be static (for now)
+  5. As the amounts change it will be reflected in the DOM
+  6. The inputs will be on the same page as the metres
+  7. The site will use only JavaScript, no libraries
+  8.
+
+The fist thing I decide to do is create three divs, one for each item in the progress bar. My first thought after that would be to create three inputs for each item in the progress bar, but I decide to do that in JavaScript so I can dynamically create names, in the event I wish to change it later to allow people to input their own names. The inputs are actually for the numbers people will input, but I still think using JavaScript might be nicer.
+
+*****screenshot of HTML, initialhtml.png, or just doing that thing with the code.*****
+
+Time to pop over to the JavaScript file.
+
+First, time to create three random numbers for the inital progress bars. I decide since it's just an arbitrary number I can choose anything so I choose a random number between 0 and 10,000. First thing learned, `Math.floor()` will create a whole number.
+
+*****screenshot of first test with fraction numbers first-random-result.png*****
+
+Thinking about making this for a few days I have considered sorting the results by making a function myself rather than using JavaScript's built in `.sort()` function.
