@@ -28,3 +28,9 @@ First, time to create three random numbers for the inital progress bars. I decid
 *****screenshot of first test with fraction numbers first-random-result.png*****
 
 Thinking about making this for a few days I have considered sorting the results by making a function myself rather than using JavaScript's built in `.sort()` function.
+
+Although in a Java class two years ago we covered how to make a bubble sort I need to look it up, I find it at this wonderful page.
+
+http://www.pkirs.utep.edu/CIS3355/Tutorials/chapter9/tutorial9A/bubblesort.htm
+
+My attempts to sort and output to console in node is not going over well, it's time to put it into chrome and see what is going on.
