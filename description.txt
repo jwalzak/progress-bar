@@ -36,3 +36,5 @@ http://www.pkirs.utep.edu/CIS3355/Tutorials/chapter9/tutorial9A/bubblesort.htm
 My attempts to sort and output to console in node is not going over well, it's time to put it into chrome and see what is going on.
 
 After looking it up one more time, I have an array sorting function. It sorts it from low to high. I'm going to write a function that reverses the array. I'm going to make a limit to how long I try it before I look up the solution.
+
+*****Sorted-low-high.png*****
