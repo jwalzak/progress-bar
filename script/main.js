@@ -12,16 +12,19 @@ let sortArray = function(arr){
   let swapped;
   do {
     swapped = false;
-    for(let i = 0; i < progressBar.length - 1; i++) {
-      if(progressBar[i] > progressBar[i + 1]) {
-        let temp = progressBar[i];
-        progressBar[i] = progressBar[i + 1];
-        progressBar[i + 1] = temp;
+    for(let i = 0; i < arr.length - 1; i++) {
+      if(arr[i] > arr[i + 1]) {
+        let temp = arr[i];
+        arr[i] = arr[i + 1];
+        arr[i + 1] = temp;
         swapped = true;
       }
     }
   } while(swapped);
-  console.log(progressBar);
+  console.log(arr);
+  sorted = arr;
 }
 
 sortArray(progressBar);
+sorted = sorted.reverse();
+console.log(sorted);
