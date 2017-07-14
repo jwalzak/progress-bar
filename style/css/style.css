@@ -1,0 +1,7 @@
+.bar {
+  color: #fff;
+  text-shadow: 0 0 0 transparent, -1px -1px 0 #000, 0px -1px 0 #000, 1px -1px 0 #000, -1px 0px 0 #000, 0px 0px 0 #000, 1px 0px 0 #000, -1px 1px 0 #000, 0px 1px 0 #000, 1px 1px 0 #000;
+  margin: 10px;
+  border: 1px solid #000; }
+
+/*# sourceMappingURL=style.css.map */

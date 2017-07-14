@@ -1,5 +1,5 @@
 let progressBar = [];
-const bar = 3;
+const bar = 30;
 for (let i = 0; i < bar; i++) {
   progressBar[i] = Math.floor((Math.random() * 10000) + 1);
 }
