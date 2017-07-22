@@ -1,5 +1,5 @@
 let progressBar = [];
-const bar = 30;
+const bar = 30; // How many bars will show on the screen
 for (let i = 0; i < bar; i++) {
   progressBar[i] = Math.floor((Math.random() * 10000) + 1);
 }
@@ -39,7 +39,6 @@ function calcPerc(arr) {
     percentArray[i] = Math.floor((arr[i] / bigVal) * max);
   }
   console.log(percentArray);
-  // return(precentArray);
 }
 
 calcPerc(sorted);
