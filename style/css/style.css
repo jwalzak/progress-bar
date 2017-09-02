@@ -1,3 +1,10 @@
+.body {
+  background: #012BCA; }
+
+.h1, .p {
+  color: #fff;
+  text-align: 'center'; }
+
 .bar {
   color: #fff;
   text-shadow: 0 0 0 transparent, -1px -1px 0 #000, 0px -1px 0 #000, 1px -1px 0 #000, -1px 0px 0 #000, 0px 0px 0 #000, 1px 0px 0 #000, -1px 1px 0 #000, 0px 1px 0 #000, 1px 1px 0 #000;
