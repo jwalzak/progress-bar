@@ -1,5 +1,4 @@
 let progressBar = new Array(5);
-const bar = 3; // How many bars will show on the screen
 
 // Uses .fill to put data in empty array so it will be iterable
 // .map used to put a random number in each element of the array.
@@ -16,8 +15,6 @@ const hexColour = () => {
   }// End for
   return output;
 }// hexColour
-
-console.log(progressBar);
 
 let sorted = [];
 
