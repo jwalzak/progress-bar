@@ -53,20 +53,16 @@ const calcPerc = arr => {
 
 calcPerc(sorted);
 
-const placeElement = arr => {
-  for(let i = 0; i < arr.length; i++) {
-    let color = hexColour();
-    let el = document.createElement('div');
-    let t = document.createTextNode(arr[i] + '%');
-    el.setAttribute('class', 'bar');
-    el.style.background = color;
-    el.style.width = arr[i] + '%';
-    el.style.height = '50px';
-    el.style.textAlign = 'center';
-    el.appendChild(t);
-    let divEl = document.querySelector('.progress--bar');
-    divEl.appendChild(el);
-  }// End for
-}// End placeElement
-
-placeElement(percentArray);
+const placeElement = percentArray.map(percent => {
+  let color = hexColour();
+  let el = document.createElement('div');
+  let t = document.createTextNode(percent + '%');
+  el.setAttribute('class', 'bar');
+  el.style.background = color;
+  el.style.width = percent + '%';
+  el.style.height = '50px';
+  el.style.textAlign = 'center';
+  el.appendChild(t);
+  let divEl = document.querySelector('.progress--bar');
+  divEl.appendChild(el);
+});
