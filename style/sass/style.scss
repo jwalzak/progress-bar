@@ -23,6 +23,15 @@
     text-shadow: $shadow;
 }
 
+.body {
+    background: #012BCA;
+}
+
+.h1, .p {
+    color: #fff;
+    text-align: 'center';
+}
+
 .bar {
   color: #fff;
   @include stroke(1px, #000);
