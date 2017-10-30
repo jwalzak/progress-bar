@@ -1,18 +1,19 @@
-let progressBar = [];
-const bar = 30; // How many bars will show on the screen
-for (let i = 0; i < bar; i++) {
-  progressBar[i] = Math.floor((Math.random() * 10000) + 1);
-}
+let progressBar = new Array(5);
+const bar = 3; // How many bars will show on the screen
 
-function hexColour() {
+// Uses .fill to put data in empty array so it will be iterable
+// .map used to put a random number in each element of the array.
+progressBar = progressBar.fill(3).map(newBar => Math.floor((Math.random() * 10000) + 1));
+console.log(progressBar);
+
+const hexColour = () => {
   const hexDigit = [0,1,2,3,4,5,6,7,8,9,'A','B','C','D','E','F'];
   const hexColourNum = 6;// Length of HTML hex colour
   let output = '#';
   for(let i = 0; i<hexColourNum; i++){
-    let randNum = Math.floor((Math.random() * hexDigit.length));
+    let randNum = Math.floor((Math.random() * hexDigit.length));// .length used to match the array
     output += hexDigit[randNum];
   }// End for
-  // console.log(`Hex output is ${output}`);
   return output;
 }// hexColour
 
@@ -20,7 +21,7 @@ console.log(progressBar);
 
 let sorted = [];
 
-let sortArray = function(arr){
+const sortArray = arr => {
   let swapped;
   do {
     swapped = false;
@@ -30,32 +31,29 @@ let sortArray = function(arr){
         arr[i] = arr[i + 1];
         arr[i + 1] = temp;
         swapped = true;
-      }
-    }
-  } while(swapped);
-  console.log(arr);
+      }// End if
+    }// End for
+  } while(swapped); // End do
   sorted = arr;
-}
+}// End sortArray
 
 sortArray(progressBar);
 sorted = sorted.reverse();
-console.log(sorted);
 
 let percentArray = [];
 
 //Calculate the % of each element in the array compared against the largest number array[0];
-function calcPerc(arr) {
+const calcPerc = arr => {
   let max = 100;
   let bigVal = arr[0]; //The largest value in the array
   for(let i = 0; i < arr.length; i++) {
     percentArray[i] = Math.floor((arr[i] / bigVal) * max);
-  }
-  console.log(percentArray);
-}
+  }// End for
+}// End calcPerc
 
 calcPerc(sorted);
 
-function placeElement(arr) {
+const placeElement = arr => {
   for(let i = 0; i < arr.length; i++) {
     let color = hexColour();
     let el = document.createElement('div');
@@ -68,7 +66,7 @@ function placeElement(arr) {
     el.appendChild(t);
     let divEl = document.querySelector('.progress--bar');
     divEl.appendChild(el);
-  }
-}
+  }// End for
+}// End placeElement
 
 placeElement(percentArray);
